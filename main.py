@@ -1,12 +1,12 @@
 import random
 
-### Wybierz X z 5 lub 7 linii! ###
+### Choose X from 5th or 7th line! ###
 
-# x = int(input("Podaj maksymalną liczbę:"))
+# x = int(input("Enter the maximum number to draw:"))
 
 x = 100
 
-print("Wylosowałem liczbę między 1 a", x)
+print("I drew a number between 1 and", x)
 tn = 0
 
 n = random.randrange(1, x)
@@ -16,14 +16,14 @@ t = 0
 while t != n:
     try:
         tn += 1
-        t = int(input("Zgadnij liczbę!: "))
+        t = int(input("guess the number!: "))
         if n > t:
-            print("Wylosowana liczba jest ^^^ WIĘKSZA od Twojej!")
+            print("The drawn number is ^^^ BIGGER than yours!")
         elif n < t:
-            print("Wylosowana liczba jest ¬¬¬ MNIEJSZA od Twojej!")
+            print("The drawn number is ¬¬¬ LESS than yours!")
         else:
-            print("BRAWO! wylosowana liczba to", n, "! Zgadłeś za", tn, "razem")
+            print("WAY TO GO! the drawn number is", n, "! number of tries", tn)
     except:
-        print("!!! Tylko LICZBY !!!")
+        print("!!! NUMBERS ONLY !!!")
 
 print("😝😝😁😁😝😝")
